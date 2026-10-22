@@ -1,9 +1,10 @@
 
-name: Deploy Figma Mockup
+name: Deploy Figma Mockup to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
@@ -12,12 +13,13 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: github-pages
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,29 +28,31 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
       - name: Install dependencies
-        working-directory: "FarmSense Mobile App Mockup"
-        run: npm install
+        run: pnpm install --frozen-lockfile
 
-      - name: Build website
-        working-directory: "FarmSense Mobile App Mockup"
-        run: npm run build
-        env:
-          FIGMA_PUBLIC_URL: /mockup_genome
+      - name: Build Vite application
+        run: pnpm run build
 
-      - name: Configure Pages
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload website
+      - name: Upload build files
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "FarmSense Mobile App Mockup/dist"
+          path: ./dist
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
