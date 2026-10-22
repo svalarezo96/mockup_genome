@@ -4,7 +4,7 @@ const SF = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", 
 
 const alerts = [
   { id: 1, type: 'warn', title: 'Soil moisture critically low', field: 'North Paddock B', time: '2h ago' },
-  { id: 2, type: 'info', title: 'Beneficial insect detected', field: 'South Block 3', time: '4h ago' },
+  { id: 2, type: 'info', title: 'Beneficial insect surge detected', field: 'South Block 3', time: '4h ago' },
   { id: 3, type: 'alert', title: 'Nutrient deficiency risk: N', field: 'East Fields', time: '8h ago' },
 ]
 
@@ -59,7 +59,7 @@ export default function HomeScreen() {
       <div style={{ padding: '14px 22px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div>
           <div style={{ fontFamily: SF, fontSize: 11, color: '#9A9186', fontWeight: 500, marginBottom: 3, letterSpacing: '0.02em' }}>Mon 21 Sep · Sunrise 06:34</div>
-          <h2 className="font-display" style={{ fontSize: 24, color: '#1C1A15', margin: 0 }}>Good morning, Stephany.</h2>
+          <h2 className="font-display" style={{ fontSize: 24, color: '#1C1A15', margin: 0 }}>Good morning, James.</h2>
         </div>
         <div style={{ width: 40, height: 40, borderRadius: '50%', background: '#3A7532', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -97,7 +97,7 @@ export default function HomeScreen() {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <HealthArc score={score} />
         <div style={{ display: 'flex', gap: 8, marginTop: -6 }}>
-          {[['Soil', '82', '#3A7532'], ['Biodiversity', '71', '#B87020'], ['Crop', '68', '#B87020']].map(([l, v, c]) => (
+          {[['Soil', '82', '#3A7532'], ['Biology', '71', '#B87020'], ['Crop', '68', '#B87020']].map(([l, v, c]) => (
             <div key={l} style={{ background: 'white', border: '1px solid #EDE8DF', borderRadius: 12, padding: '8px 14px', textAlign: 'center', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
               <div style={{ fontFamily: SF, fontSize: 10, color: '#9A9186', fontWeight: 500, marginBottom: 2 }}>{l}</div>
               <div className="font-display" style={{ fontSize: 20, color: c as string, lineHeight: 1 }}>{v}</div>
