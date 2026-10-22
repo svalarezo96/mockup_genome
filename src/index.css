@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-ui: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+
+  --color-ground: #EDE8DF;
+  --color-surface: #F7F4EE;
+  --color-panel: #FFFFFF;
+  --color-raised: #F0EBE2;
+  --color-border: #D8D0C4;
+  --color-border-subtle: #E8E2D8;
+
+  --color-moss: #3A7532;
+  --color-moss-light: #4E9444;
+  --color-moss-pale: #E8F2E6;
+  --color-amber: #B87020;
+  --color-amber-light: #D4893A;
+  --color-amber-pale: #FDF0E0;
+
+  --color-text-primary: #1C1A15;
+  --color-text-secondary: #5A5248;
+  --color-text-muted: #9A9186;
+  --color-text-amber: #B87020;
+
+  --color-status-good: #3A7532;
+  --color-status-warn: #B87020;
+  --color-status-alert: #C03428;
+  --color-status-info: #2A5C82;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  background: #E4DDD2;
+  font-family: var(--font-ui);
+  color: var(--color-text-primary);
+}
+
+::-webkit-scrollbar { width: 0; height: 0; }
+
+.font-display { font-family: var(--font-display); }
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadein {
+  animation: fadein 0.3s ease both;
+}
+

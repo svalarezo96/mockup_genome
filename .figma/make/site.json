@@ -1,0 +1,10 @@
+{
+  "description": "FarmSense is an AI-driven platform that empowers farmers to monitor farm health through integrated data on soil, weather, and biodiversity for informed decision-making.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
