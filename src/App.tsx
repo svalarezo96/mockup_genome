@@ -53,7 +53,7 @@ const tabs: { id: Tab; label: string; icon: (active: boolean) => React.ReactNode
   },
   {
     id: 'insights',
-    label: 'Recomendation',
+    label: 'AI',
     icon: (active) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <circle cx="11" cy="11" r="8" fill={active ? '#3A753218' : 'none'} stroke={active ? '#3A7532' : '#9A9186'} strokeWidth="1.5"/>
