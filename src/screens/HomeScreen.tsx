@@ -4,7 +4,7 @@ const SF = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", 
 
 const alerts = [
   { id: 1, type: 'warn', title: 'Soil moisture critically low', field: 'North Paddock B', time: '2h ago' },
-  { id: 2, type: 'info', title: 'Beneficial insect surge detected', field: 'South Block 3', time: '4h ago' },
+  { id: 2, type: 'info', title: 'Beneficial insect detected', field: 'South Block 3', time: '4h ago' },
   { id: 3, type: 'alert', title: 'Nutrient deficiency risk: N', field: 'East Fields', time: '8h ago' },
 ]
 
@@ -97,7 +97,7 @@ export default function HomeScreen() {
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <HealthArc score={score} />
         <div style={{ display: 'flex', gap: 8, marginTop: -6 }}>
-          {[['Soil', '82', '#3A7532'], ['Biology', '71', '#B87020'], ['Crop', '68', '#B87020']].map(([l, v, c]) => (
+          {[['Soil', '82', '#3A7532'], ['Biodiversity', '71', '#B87020'], ['Crop', '68', '#B87020']].map(([l, v, c]) => (
             <div key={l} style={{ background: 'white', border: '1px solid #EDE8DF', borderRadius: 12, padding: '8px 14px', textAlign: 'center', boxShadow: '0 1px 3px rgba(0,0,0,0.06)' }}>
               <div style={{ fontFamily: SF, fontSize: 10, color: '#9A9186', fontWeight: 500, marginBottom: 2 }}>{l}</div>
               <div className="font-display" style={{ fontSize: 20, color: c as string, lineHeight: 1 }}>{v}</div>
@@ -150,7 +150,7 @@ export default function HomeScreen() {
           {[
             { action: 'SOC prediction updated', detail: 'East Fields — 3.4% C ↑ 0.1', time: '1h' },
             { action: 'Field observation logged', detail: 'North Paddock B — Aphid pressure moderate', time: '3h' },
-            { action: 'Lab results received', detail: 'South Block 3 — pH 6.8, Bray P 22 ppm', time: '6h' },
+            { action: 'Lab results received', detail: 'South Block 3 — pH 6.8', time: '6h' },
             { action: 'Rain event recorded', detail: '14mm — West Dryland', time: '12h' },
           ].map((item, i, arr) => (
             <div key={i} style={{ display: 'flex', gap: 12, padding: '12px 16px', borderBottom: i < arr.length - 1 ? '1px solid #F0EBE2' : 'none', alignItems: 'flex-start' }}>

@@ -132,7 +132,7 @@ export default function InsightsScreen() {
           <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#3A7532' }} />
           <span style={{ fontFamily: SF, fontSize: 11, color: '#9A9186', fontWeight: 500 }}>AI Analysis · Updated 9:41 AM</span>
         </div>
-        <h2 className="font-display" style={{ fontSize: 24, color: '#1C1A15', margin: 0 }}>Farm Intelligence</h2>
+        <h2 className="font-display" style={{ fontSize: 24, color: '#1C1A15', margin: 0 }}>Farm Recomendations</h2>
       </div>
 
       {/* Season trend card */}
