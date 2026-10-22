@@ -1,0 +1,54 @@
+
+name: Deploy Figma Mockup
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: "FarmSense Mobile App Mockup"
+        run: npm install
+
+      - name: Build website
+        working-directory: "FarmSense Mobile App Mockup"
+        run: npm run build
+        env:
+          FIGMA_PUBLIC_URL: /mockup_genome
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "FarmSense Mobile App Mockup/dist"
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
