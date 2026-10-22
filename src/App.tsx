@@ -76,33 +76,33 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-dvh flex items-center justify-center p-6" style={{ background: '#DDD7CB' }}>
-      {/* Desktop label */}
-      <div className="hidden lg:flex flex-col items-start mr-16 max-w-xs">
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
-          <div style={{ width: 28, height: 28, borderRadius: 8, background: '#3A7532', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 1.5C5 1.5 2.5 3.5 2.5 6.5c0 2.5 2 4.5 3.5 5.5L8 14l2-2c1.5-1 3.5-3 3.5-5.5 0-3-2.5-5-5.5-5z" fill="white"/>
-            </svg>
-          </div>
-          <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 13, fontWeight: 600, color: '#1C1A15', letterSpacing: '-0.01em' }}>FarmSense</span>
-          <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 11, color: '#9A9186', background: '#E8E2D8', padding: '2px 6px', borderRadius: 4 }}>v2.4</span>
-        </div>
-        <h1 className="font-display" style={{ fontSize: 38, lineHeight: 1.15, color: '#1C1A15', marginBottom: 14, marginTop: 0 }}>
-          Understand the<br /><em>health</em> of<br />your farm.
-        </h1>
-        <p style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 14, lineHeight: 1.6, color: '#5A5248', marginBottom: 24, marginTop: 0 }}>
-          AI-powered field intelligence combining soil science, microbiome data, weather, biodiversity monitoring, and precision observations.
-        </p>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-          {['SOC Prediction Engine', 'Microbiome Analysis', 'Insect Monitoring', 'Weather Integration', 'AI Decision Support'].map(f => (
-            <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <div style={{ width: 5, height: 5, background: '#3A7532', borderRadius: '50%' }} />
-              <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 13, color: '#5A5248' }}>{f}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+    // <div className="min-h-dvh flex items-center justify-center p-6" style={{ background: '#DDD7CB' }}>
+    //   {/* Desktop label */}
+    //   <div className="hidden lg:flex flex-col items-start mr-16 max-w-xs">
+    //     <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
+    //       <div style={{ width: 28, height: 28, borderRadius: 8, background: '#3A7532', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    //         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    //           <path d="M8 1.5C5 1.5 2.5 3.5 2.5 6.5c0 2.5 2 4.5 3.5 5.5L8 14l2-2c1.5-1 3.5-3 3.5-5.5 0-3-2.5-5-5.5-5z" fill="white"/>
+    //         </svg>
+    //       </div>
+    //       <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 13, fontWeight: 600, color: '#1C1A15', letterSpacing: '-0.01em' }}>FarmSense</span>
+    //       <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 11, color: '#9A9186', background: '#E8E2D8', padding: '2px 6px', borderRadius: 4 }}>v2.4</span>
+    //     </div>
+    //     <h1 className="font-display" style={{ fontSize: 38, lineHeight: 1.15, color: '#1C1A15', marginBottom: 14, marginTop: 0 }}>
+    //       Understand the<br /><em>health</em> of<br />your farm.
+    //     </h1>
+    //     <p style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 14, lineHeight: 1.6, color: '#5A5248', marginBottom: 24, marginTop: 0 }}>
+    //       AI-powered field intelligence combining soil science, microbiome data, weather, biodiversity monitoring, and precision observations.
+    //     </p>
+    //     <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+    //       {['SOC Prediction Engine', 'Microbiome Analysis', 'Insect Monitoring', 'Weather Integration', 'AI Decision Support'].map(f => (
+    //         <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+    //           <div style={{ width: 5, height: 5, background: '#3A7532', borderRadius: '50%' }} />
+    //           <span style={{ fontFamily: '-apple-system, BlinkMacSystemFont', fontSize: 13, color: '#5A5248' }}>{f}</span>
+    //         </div>
+    //       ))}
+    //     </div>
+    //   </div>
 
       {/* Phone frame */}
       <div
