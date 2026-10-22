@@ -53,7 +53,7 @@ const tabs: { id: Tab; label: string; icon: (active: boolean) => React.ReactNode
   },
   {
     id: 'insights',
-    label: 'AI',
+    label: 'Recomendation',
     icon: (active) => (
       <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
         <circle cx="11" cy="11" r="8" fill={active ? '#3A753218' : 'none'} stroke={active ? '#3A7532' : '#9A9186'} strokeWidth="1.5"/>
@@ -78,7 +78,7 @@ export default function App() {
   return (
     <div className="min-h-dvh flex items-center justify-center p-6" style={{ background: '#DDD7CB' }}>
       {/* Desktop label */}
-      <div className="hidden lg:flex flex-col items-start mr-16 max-w-xs">
+      {/* <div className="hidden lg:flex flex-col items-start mr-16 max-w-xs">
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 16 }}>
           <div style={{ width: 28, height: 28, borderRadius: 8, background: '#3A7532', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -102,7 +102,7 @@ export default function App() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* Phone frame */}
       <div
