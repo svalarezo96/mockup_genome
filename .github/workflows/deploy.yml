@@ -1,5 +1,5 @@
 
-name: Deploy Figma Mockup to GitHub Pages1
+name: Deploy Figma Mockup to GitHub Pages
 
 on:
   push:
