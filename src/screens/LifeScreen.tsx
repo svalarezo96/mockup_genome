@@ -20,9 +20,9 @@ const biodiversity = [
 ]
 
 const observations = [
-  { date: '18 Sep', observer: 'J. Hartley', type: 'Vegetation', note: 'Native grass understory recovering well', field: 'West Dryland' },
+  { date: '18 Sep', observer: 'J. Hartley', type: 'Vegetation', note: 'Native grass understory recovering well in riparian margin', field: 'West Dryland' },
   { date: '16 Sep', observer: 'AI Trap', type: 'Insect', note: 'Aphid population 142 per 100 tillers — exceeds economic threshold', field: 'North Paddock B' },
-  { date: '14 Sep', observer: 'J. Hartley', type: 'Bird', note: 'White-winged chough nesting confirmed', field: 'West Dryland' },
+  { date: '14 Sep', observer: 'J. Hartley', type: 'Bird', note: 'White-winged chough nesting confirmed — habitat corridor effective', field: 'West Dryland' },
   { date: '11 Sep', observer: 'Camera trap', type: 'Mammal', note: 'Echidna activity recorded — soil disturbance beneficial', field: 'South Block 3' },
 ]
 
