@@ -3,9 +3,9 @@ import { useState } from 'react'
 const SF = '-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif'
 
 const fields = [
-  { id: 'NPA', name: 'North Paddock A', area: 48.2, health: 84, status: 'good', crop: 'Winter Wheat', moisture: 42 , notes: ""},
+  { id: 'NPA', name: 'North Paddock A', area: 48.2, health: 84, status: 'good', crop: 'Winter Wheat', moisture: 42, notes: 'Excellent' },
   { id: 'NPB', name: 'North Paddock B', area: 31.5, health: 51, status: 'warn', crop: 'Canola', moisture: 21, notes: 'Moisture stress — critical' },
-  { id: 'SB3', name: 'South Block 3', area: 62.1, health: 78, status: 'good', crop: 'Barley', moisture: 38 , notes: "" },
+  { id: 'SB3', name: 'South Block 3', area: 62.1, health: 78, status: 'good', crop: 'Barley', moisture: 38, notes: 'Monitoring active' },
   { id: 'EF1', name: 'East Fields', area: 44.7, health: 63, status: 'warn', crop: 'Chickpea', moisture: 29, notes: 'Nitrogen deficiency risk' },
   { id: 'WD', name: 'West Dryland', area: 87.3, health: 71, status: 'good', crop: 'Fallow', moisture: 35, notes: '14mm rain event recorded' },
 ]

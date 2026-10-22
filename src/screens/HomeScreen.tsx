@@ -150,7 +150,7 @@ export default function HomeScreen() {
           {[
             { action: 'SOC prediction updated', detail: 'East Fields — 3.4% C ↑ 0.1', time: '1h' },
             { action: 'Field observation logged', detail: 'North Paddock B — Aphid pressure moderate', time: '3h' },
-            { action: 'Lab results received', detail: 'South Block 3 — pH 6.8', time: '6h' },
+            { action: 'Lab results received', detail: 'South Block 3 — pH 6.8, Bray P 22 ppm', time: '6h' },
             { action: 'Rain event recorded', detail: '14mm — West Dryland', time: '12h' },
           ].map((item, i, arr) => (
             <div key={i} style={{ display: 'flex', gap: 12, padding: '12px 16px', borderBottom: i < arr.length - 1 ? '1px solid #F0EBE2' : 'none', alignItems: 'flex-start' }}>
