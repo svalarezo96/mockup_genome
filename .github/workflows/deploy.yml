@@ -45,6 +45,15 @@ jobs:
       - name: Build Vite application
         run: pnpm run build
 
+      - name: Verify compiled HTML
+        run: |
+          test -f dist/index.html
+          if grep -q 'src="/src/main.tsx"' dist/index.html; then
+            echo "ERROR: Vite did not compile index.html"
+            exit 1
+          fi
+          grep -oE 'src="[^"]+\.js"' dist/index.html || true
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
